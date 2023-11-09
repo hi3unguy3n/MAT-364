@@ -1,0 +1,16 @@
+The file input_1.txt will contain the following inputs:
+Line 1: An elementary function f(x), in the form of a string that can be converted to a SymPy expression
+Line 2: The domain of f (x) in the form [a;b], where a and b are floating point numbers
+Line 3: A point c in [a;b] at which to approximate f (x), in the form of a floating point number
+Line 4: A maximum allowable error E for that approximation, in the form of a floating point number
+
+The program does the following: 
+(1) Read the entries from the file input_1.txt and, where necessary, convert them to the correct data
+types. 
+(2) Determine the degree n of the first Taylor polynomial pn(x), centered at the midpoint of [a;b],
+guaranteed by Taylor’s theorem to approximate f(x) to within the given error E on the entire interval
+[a;b].
+(3) Use the Taylor polynomial of degree n to approximate f (x) at the given point c and find the error in
+this approximation (of the form R_n(c) = p_n(c) - f(c)).
+(4) Plot f(x) and the Taylor polynomial p_n(x) using the plot function in SymPy. Also, plot the points
+(c; f(c)) and (c; p_n(c)) on the appropriate graphs.

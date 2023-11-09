@@ -1,0 +1,17 @@
+The file input_5.txt will contain the following inputs:
+Line 1: An elementary function f(x) of the variable x, in the form of a string that can be converted to a
+SymPy expression. This function will have a simple, elementary antiderivative.
+Line 2: The domain of f(x) in the form of interval of the form [a;b], where a and b are floating point
+numbers.
+Line 3: An error tolerance epsilon, in the form of a positive floating point number.
+
+The program does the following:
+(1) Read the entries from the file input_5.txt and, where necessary, convert them to the correct data
+types.
+(2) Compute the definite integral of f(x) by using the SymPy function integrate to find an antiderivative 
+of f and applying the fundamental theorem of calculus.
+(3) Find the smallest number of subintervals M needed to guaranteed the definite integral of f(x) is 
+approximated to within an error tolerance of e using trapezoid rule and the smallest number of subintervals 
+N needed to guaranteed it within e using Simpson’s rule, based on the error bounds discussed in class.
+(4) Compute the approximations given by the two rules for every integer from 1 to max{M;N} and the
+associated uniform errors.

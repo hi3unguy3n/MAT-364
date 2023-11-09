@@ -1,0 +1,16 @@
+The file input_2.txt will contain the following inputs:
+Line 1: An elementary function f(n) of the variable n, in the form of a string that can be converted to a
+SymPy expression.
+Line 2: The coefficients a_k of a finite series, indexed by k, that when summed from 1 to n produce f(n).
+Line 3: A list of positive integers in the form N_1,...,N_m (without spaces between terms).
+
+The program does the following:
+(1) Read the entries from the file input_2.txt and, where necessary, convert them to the correct data
+types. The sympify function in SymPy will be helpful here.
+(2) For each i from 1 to m (where m is the largest index of the N_1,...,N_m), compute sum from k=1 to k=N_i of a_k using each of the following methods:
+	(I) LS (largest-to-smallest) with chopping to ten decimal places
+	(III) LS (largest-to-smallest) with rounding to ten decimal places
+	(II) SL (smallest-to-largest) with chopping to ten decimal places
+	(IV) SL (smallest-to-largest) with rounding to ten decimal places
+(3) Compute the correct values f(N_i), rounded to ten decimal places.
+(4) Compute the errors E_i for each of the four methods, rounded to ten decimal places.

@@ -1,0 +1,24 @@
+The file input_3.txt will contain the following inputs:
+Line 1: An elementary function f(x) of the variable x, in the form of a string that can be converted to a
+SymPy expression.
+Line 2: An interval of the form [a;b] that contains exactly one root of f(x), where a and b are floating
+point numbers.
+Line 3: An error tolerance epsilon, in the form of a floating point number.
+Line 4: A polynomial p(x) that can be factored completely into the product of linear terms, whose roots
+all lie in the interval [-1000;1000], and whose distinct roots are all separated by more than one unit.
+
+The program does the following:
+(1) Read the entries from the file input_3.txt and, where necessary, convert them to the correct data
+types.
+(2) Approximate the root of f(x) in [a;b] to within an error of epsilon using each of the following methods:
+	(I) The bisection method with initial interval [a;b]
+	(II) Newton’s method with initial guess the midpoint of [a;b]
+	(III) The secant method with initial guesses a and b
+(3) Find an interval of length one guaranteed to contain a root of p(x).
+(4) Employ the bisection method on that interval to approximate that root r to within an error tolerance 
+of epsilon.
+(5) Employ synthetic, or polynomial, division to produce an approximate factorization
+					p(x) = (x-r)p_1(x),
+where p_1(x) is a polynomial of one degree less than p(x).
+(6) Return to step (4) with p1(x). Continue until p(x) has been completely factored into a product of
+linear terms.

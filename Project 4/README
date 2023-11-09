@@ -1,0 +1,18 @@
+The file input_4.txt will contain the following inputs:
+Line 1: An elementary function f (x) of the variable x, in the form of a string that can be converted to a
+SymPy expression.
+Line 2: The domain of f(x) in the form of interval of the form [a;b], where a and b are floating point
+numbers.
+Line 3: An integer n, to be the degree of polynomial approximations of f(x) over [a;b].
+
+
+The program does the following:
+(1) Read the entries from the file input_4.txt and, where necessary, convert them to the correct data
+types.
+(2) Compute the Taylor polynomial p_n(x) of degree n for f(x) centered at the midpoint of [a;b].
+(3) Compute the polynomial q_n(x) that interpolates f (x) at the n+1 equally spaced points x_i = a+i*delta(x)
+for i = 1,...n+1, where delta(x) = (b-a)/(n+2).
+(4) Compute the Chebyshev nodes of y_0,...,y_n degree n.
+(5) Compute the near-minimax polynomial r_n(x) of degree n for f(x) on [a;b].
+(6) Use the minimize scalar function to approximate the uniform error in approximating f(x) by each
+of the above polynomials on [a;b].
